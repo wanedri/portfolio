@@ -7,67 +7,67 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 const technologies = [
   {
     name: "HTML 5",
-    icon: "../assets/skills/html.png",
+    icon: "../portfolio/assets/skills/html.png",
   },
   {
     name: "CSS 3",
-    icon: "../assets/skills/css.png",
+    icon: "../portfolio/assets/skills/css.png",
   },
   {
     name: "JavaScript",
-    icon: "../assets/skills/javascript.png",
+    icon: "../portfolio/assets/skills/javascript.png",
   },
   // {
   //     name: "TypeScript",
-  //     icon: "../assets/skills/typescript.png",
+  //     icon: "../portfolio/assets/skills/typescript.png",
   // },
   {
     name: "Bootstrap",
-    icon: "../assets/skills/bootstrap.png",
+    icon: "../portfolio/assets/skills/bootstrap.png",
   },
   {
     name: "React JS",
-    icon: "../assets/skills/reactjs.png",
+    icon: "../portfolio/assets/skills/reactjs.png",
   },
   {
     name: "React Native",
-    icon: "../assets/skills/reactjs.png",
+    icon: "../portfolio/assets/skills/reactjs.png",
   },
   // {
   //     name: "Redux Toolkit",
-  //     icon: "../assets/skills/redux.png",
+  //     icon: "../portfolio/assets/skills/redux.png",
   // },
   {
     name: "Tailwind CSS",
-    icon: "../assets/skills/tailwind.png",
+    icon: "../portfolio/assets/skills/tailwind.png",
   },
   {
     name: "Laravel",
-    icon: "../assets/skills/laravel.png",
+    icon: "../portfolio/assets/skills/laravel.png",
   },
   // {
   //     name: "Node JS",
-  //     icon: "../assets/skills/nodejs.png",
+  //     icon: "../portfolio/assets/skills/nodejs.png",
   // },
   // {
   //     name: "MongoDB",
-  //     icon: "../assets/skills/mongodb.png",
+  //     icon: "../portfolio/assets/skills/mongodb.png",
   // },
   // {
   //     name: "Three JS",
-  //     icon: "../assets/skills/threejs.svg",
+  //     icon: "../portfolio/assets/skills/threejs.svg",
   // },
   {
     name: "git",
-    icon: "../assets/skills/git.png"
+    icon: "../portfolio/assets/skills/git.png"
   },
   // {
   //     name: "figma",
-  //     icon: "../assets/skills/figma.png",
+  //     icon: "../portfolio/assets/skills/figma.png",
   // },
   // {
   //     name: "docker",
-  //     icon: "../assets/skills/docker.png",
+  //     icon: "../portfolio/assets/skills/docker.png",
   // },
 ];
 
@@ -124,7 +124,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: '../assets/projects/PahangFAApp.jpg',
+    image: '../portfolio/assets/projects/PahangFAApp.jpg',
   },
   {
     name: "MFL",
@@ -140,7 +140,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: '../assets/projects/MFL.jpg',
+    image: '../portfolio/assets/projects/MFL.jpg',
   },
   {
     name: "Dorus App",
@@ -160,7 +160,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: '../assets/projects/DorusApp.jpg',
+    image: '../portfolio/assets/projects/DorusApp.jpg',
   },
   {
     name: "Dorus Web",
@@ -176,7 +176,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: '../assets/projects/DorusWeb.png',
+    image: '../portfolio/assets/projects/DorusWeb.png',
   },
   {
     name: "Aducktive",
@@ -192,7 +192,7 @@ const projects = [
         color: "pink-text-gradient",
       }
     ],
-    image: '../assets/projects/Aducktive.png',
+    image: '../portfolio/assets/projects/Aducktive.png',
   },
   {
     name: "Invest Pahang",
@@ -216,7 +216,7 @@ const projects = [
         color: "pink-text-gradient",
       }
     ],
-    image: '../assets/projects/InvestPahang.png',
+    image: '../portfolio/assets/projects/InvestPahang.png',
   },
   {
     name: "Invest Pahang Web",
@@ -232,7 +232,7 @@ const projects = [
         color: "green-text-gradient",
       }
     ],
-    image: '../assets/projects/InvestPahangWeb.png',
+    image: '../portfolio/assets/projects/InvestPahangWeb.png',
   },
   {
     name: "TM",
@@ -248,7 +248,7 @@ const projects = [
         color: "green-text-gradient",
       }
     ],
-    image: '../assets/projects/TM.jpg',
+    image: '../portfolio/assets/projects/TM.jpg',
   },
   {
     name: "Mentiga",
@@ -264,7 +264,7 @@ const projects = [
         color: "green-text-gradient",
       }
     ],
-    image: '../assets/projects/Mentiga.png',
+    image: '../portfolio/assets/projects/Mentiga.png',
   },
   {
     name: "KGT",
@@ -280,7 +280,7 @@ const projects = [
         color: "green-text-gradient",
       }
     ],
-    image: '../assets/projects/KGT.png',
+    image: '../portfolio/assets/projects/KGT.png',
   },
 ];
 
