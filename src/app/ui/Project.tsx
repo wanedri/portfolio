@@ -1,7 +1,7 @@
 'use client'
 
 import React from "react";
-import Tilt from "react-tilt";
+import Tilt  from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 // import { github } from "../assets";
@@ -15,14 +15,14 @@ const ProjectCard = ({
   description,
   tags,
   image,
-  source_code_link,
+  // source_code_link,
 }: {
   index: number;
   name: string;
   description: string;
   tags: Array<{ name: string; color: string }>;
   image: string;
-  source_code_link: string;
+  // source_code_link: string;
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
