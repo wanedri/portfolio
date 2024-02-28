@@ -8,12 +8,12 @@ import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
 export default function Avatar({wave,setWave,...props}) {
-  const { nodes, materials } = useGLTF('models/avatar.glb');
+  const { nodes, materials } = useGLTF('../portfolio/models/avatar.glb');
   const group = useRef()
 
-  const {animations: armAnimations} = useFBX('animations/Arm Stretching.fbx')
-  const {animations: boredAnimations} = useFBX('animations/Bored.fbx')
-  const {animations: idleAnimations} = useFBX('animations/Offensive Idle.fbx')
+  const {animations: armAnimations} = useFBX('../portfolio/animations/Arm Stretching.fbx')
+  const {animations: boredAnimations} = useFBX('../portfolio/animations/Bored.fbx')
+  const {animations: idleAnimations} = useFBX('../portfolio/animations/Offensive Idle.fbx')
 
   armAnimations[0].name = 'ArmStreching'
   boredAnimations[0].name = 'Bored'
@@ -105,4 +105,4 @@ export default function Avatar({wave,setWave,...props}) {
   );
 }
 
-useGLTF.preload('/avatar.glb');
+useGLTF.preload('../portfolio/models/avatar.glb');

@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import Contact from './Contact';
-
+import CanvasLoader from '../components/Loader'
 
 const About = () => {
     const [wave, setWave] = useState(0);
@@ -33,7 +33,7 @@ const About = () => {
                     intensity={0.3}
                 />
                 <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
-                <Suspense fallback={null}>
+                <Suspense fallback={<CanvasLoader/>}>
                     <Avatar
                         wave={wave}
                         setWave={setWave}
