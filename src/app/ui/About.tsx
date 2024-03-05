@@ -13,23 +13,22 @@ import Contact from './Contact';
 import CanvasLoader from '../components/Loader'
 
 const About = () => {
-    const [wave, setWave] = useState(0);
+    const [wave, setWave] = useState(false);
+    const [index, setIndex] = useState(0);
 
     return (
         <section className='flex min-h-screen sm:flex-row flex-col'>
             <Canvas
                 className={`w-100 h-screen bg-transparent`}
                 style={{ height: '100vh' }}
-                camera={{ near: 5, far: 1000, position: [0, 4, 8] }}
-                onClick={() => setWave(1)}
+                camera={{  position: [0,0.5, 3] }}
             >
                 {/* <OrbitControls /> */}
                 <directionalLight
                     position={[10, 20, 10]}
-                    intensity={1.8}
+                    intensity={1.4}
                 />
                 <ambientLight
-                    // intensity={0.5}
                     intensity={0.3}
                 />
                 <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
@@ -37,8 +36,14 @@ const About = () => {
                     <Avatar
                         wave={wave}
                         setWave={setWave}
-                        scale={[6, 6, 6]}
-                        position={[0, -6.5, -2]}
+                        index={index}
+                        setIndex={setIndex}
+                        onClick={() => {
+                            setWave(true)
+                            setIndex((index + 1)% 2)
+                        } }
+                        scale={[2, 2, 2]}
+                        position={[0, -1.9, -0.5]}
                     />
                 </Suspense>
             </Canvas>
