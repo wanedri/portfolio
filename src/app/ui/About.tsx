@@ -11,6 +11,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import Contact from './Contact';
 import CanvasLoader from '../components/Loader'
+import {StarsCanvas} from '../components/canvas';
 
 const About = () => {
     const [wave, setWave] = useState(false);
@@ -18,6 +19,7 @@ const About = () => {
 
     return (
         <section className='flex min-h-screen sm:flex-row flex-col'>
+            <StarsCanvas/>
             <Canvas
                 className={`w-100 h-screen bg-transparent`}
                 style={{ height: '100vh' }}
@@ -63,7 +65,7 @@ const About = () => {
                 />
                 <motion.p
                     variants={fadeIn("", "", 0.1, 1)}
-                    className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+                    className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] z-1'
                 >
                     Hello there, my name is Adri and I'm a software developer with a passion for creating and learning. I have 3+ years experience in software development. I'm always looking for new challenges and opportunities to grow.
                 </motion.p>

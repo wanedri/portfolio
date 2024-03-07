@@ -17,10 +17,6 @@ const technologies = [
     name: "JavaScript",
     icon: "../portfolio/assets/skills/javascript.png",
   },
-  // {
-  //     name: "TypeScript",
-  //     icon: "../portfolio/assets/skills/typescript.png",
-  // },
   {
     name: "Bootstrap",
     icon: "../portfolio/assets/skills/bootstrap.png",
@@ -33,10 +29,6 @@ const technologies = [
     name: "React Native",
     icon: "../portfolio/assets/skills/reactjs.png",
   },
-  // {
-  //     name: "Redux Toolkit",
-  //     icon: "../portfolio/assets/skills/redux.png",
-  // },
   {
     name: "Tailwind CSS",
     icon: "../portfolio/assets/skills/tailwind.png",
@@ -45,102 +37,52 @@ const technologies = [
     name: "Laravel",
     icon: "../portfolio/assets/skills/laravel.png",
   },
-  // {
-  //     name: "Node JS",
-  //     icon: "../portfolio/assets/skills/nodejs.png",
-  // },
-  // {
-  //     name: "MongoDB",
-  //     icon: "../portfolio/assets/skills/mongodb.png",
-  // },
-  // {
-  //     name: "Three JS",
-  //     icon: "../portfolio/assets/skills/threejs.svg",
-  // },
   {
     name: "git",
     icon: "../portfolio/assets/skills/git.png"
-  },
-  // {
-  //     name: "figma",
-  //     icon: "../portfolio/assets/skills/figma.png",
-  // },
-  // {
-  //     name: "docker",
-  //     icon: "../portfolio/assets/skills/docker.png",
-  // },
+  }
 ];
 
-
-// Pahang FA
-// Pahang FA App
-// MFL
-// Gocata
-// DorusApp
-// DorusWeb
-// Aducktive
-// Invest Pahang
-// TM
-// Mentiga
-// KGT
-
 const projects = [
-  // {
-  //   name: "Pahang FA",
-  //   description:
-  //     "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-  //   tags: [
-  //     {
-  //       name: "react",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "mongodb",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "tailwind",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: 'https://source.unsplash.com/featured/?car,rent',
-  //   source_code_link: "https://github.com/",
-  // },
   {
-    name: "Pahang FA App",
+    name: "Invest Pahang",
     description:
-      "Application that allows users to book ticket and view match schedule for Sri Pahang FC football team.",
+      "Web application that allows to manage proposal and investment for Pahang state. It's also have a feature to manage the user and their proposal.",
     tags: [
       {
-        name: "react native",
-        color: "orange-text-gradient",
+        name: "react",
+        color: "green-text-gradient",
       },
       {
         name: "laravel",
         color: "blue-text-gradient",
       },
       {
+        name: "rest api",
+        color: "violet-text-gradient",
+      },
+      {
         name: "bootstrap",
         color: "pink-text-gradient",
-      },
+      }
     ],
-    image: '../portfolio/assets/projects/PahangFAApp.jpg',
+    image: '../portfolio/assets/projects/InvestPahang.png',
   },
   {
-    name: "MFL",
+    name: "Invest Pahang Web",
     description:
-      "Mockup application that allows users to view match schedule and play game like fantasy football.",
+      "An website for Invest Pahang. It's a corporate website for Invest Pahang to promote their services and investment opportunities.",
     tags: [
       {
-        name: "react native",
-        color: "orange-text-gradient",
+        name: "laravel",
+        color: "blue-text-gradient",
       },
       {
-        name: "bootstrap",
-        color: "pink-text-gradient",
-      },
+        name: "statamic",
+        color: "green-text-gradient",
+      }
     ],
-    image: '../portfolio/assets/projects/MFL.jpg',
+    image: '../portfolio/assets/projects/InvestPahangWeb.png',
   },
   {
     name: "Dorus App",
@@ -195,60 +137,40 @@ const projects = [
     image: '../portfolio/assets/projects/Aducktive.png',
   },
   {
-    name: "Invest Pahang",
+    name: "Pahang FA App",
     description:
-      "Web application that allows to manage proposal and investment for Pahang state. It's also have a feature to manage the user and their proposal.",
+      "Application that allows users to book ticket and view match schedule for Sri Pahang FC football team.",
     tags: [
       {
-        name: "react",
-        color: "green-text-gradient",
+        name: "react native",
+        color: "orange-text-gradient",
       },
       {
         name: "laravel",
         color: "blue-text-gradient",
-      },
-      {
-        name: "rest api",
-        color: "violet-text-gradient",
       },
       {
         name: "bootstrap",
         color: "pink-text-gradient",
-      }
+      },
     ],
-    image: '../portfolio/assets/projects/InvestPahang.png',
+    image: '../portfolio/assets/projects/PahangFAApp.jpg',
   },
   {
-    name: "Invest Pahang Web",
+    name: "MFL",
     description:
-      "An website for Invest Pahang. It's a corporate website for Invest Pahang to promote their services and investment opportunities.",
+      "Mockup application that allows users to view match schedule and play game like fantasy football.",
     tags: [
       {
-        name: "laravel",
-        color: "blue-text-gradient",
+        name: "react native",
+        color: "orange-text-gradient",
       },
       {
-        name: "statamic",
-        color: "green-text-gradient",
-      }
-    ],
-    image: '../portfolio/assets/projects/InvestPahangWeb.png',
-  },
-  {
-    name: "TM",
-    description:
-      "Work with TM for 6 months to develop an internal system. ",
-    tags: [
-      {
-        name: "laravel",
-        color: "blue-text-gradient",
+        name: "bootstrap",
+        color: "pink-text-gradient",
       },
-      {
-        name: "php",
-        color: "green-text-gradient",
-      }
     ],
-    image: '../portfolio/assets/projects/TM.jpg',
+    image: '../portfolio/assets/projects/MFL.jpg',
   },
   {
     name: "Mentiga",
@@ -281,6 +203,22 @@ const projects = [
       }
     ],
     image: '../portfolio/assets/projects/KGT.png',
+  },
+  {
+    name: "TM",
+    description:
+      "Work with TM for 6 months to develop an internal system. ",
+    tags: [
+      {
+        name: "laravel",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "php",
+        color: "green-text-gradient",
+      }
+    ],
+    image: '../portfolio/assets/projects/TM.jpg',
   },
 ];
 
