@@ -3,7 +3,7 @@
 import { TypeAnimation } from 'react-type-animation';
 import { Canvas } from '@react-three/fiber';
 import Avatar from '../components/models/Avatar';
-import { Suspense, useState } from 'react';
+import { Suspense, useState,useEffect,useMemo } from 'react';
 import { SectionWrapper } from '../hoc';
 import { OrbitControls } from '@react-three/drei';
 import { motion } from "framer-motion";
@@ -12,17 +12,126 @@ import { styles } from "../styles";
 import Contact from './Contact';
 import CanvasLoader from '../components/Loader'
 import {StarsCanvas} from '../components/canvas';
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import {
+    type Container,
+    type ISourceOptions,
+    MoveDirection,
+    OutMode,
+  } from "@tsparticles/engine";
+import { loadSlim } from "@tsparticles/slim";
 
 const About = () => {
     const [wave, setWave] = useState(false);
     const [index, setIndex] = useState(0);
+    const [init, setInit] = useState(false);
+
+      // this should be run only once per application lifetime
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+      // starting from v2 you can add only the features you need reducing the bundle size
+      //await loadAll(engine);
+      //await loadFull(engine);
+      await loadSlim(engine);
+      //await loadBasic(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
+  const particlesLoaded = async (container?: Container): Promise<void> => {
+    console.log(container);
+  };
+
+  const options: ISourceOptions = useMemo(
+    () => ({
+      background: {
+        color: {
+          value: "#000000",
+        },
+      },
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: true,
+            mode: "push",
+          },
+          onHover: {
+            enable: true,
+            mode: "repulse",
+          },
+        },
+        modes: {
+          push: {
+            quantity: 4,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: "#ffffff",
+        },
+        links: {
+          color: "#ffffff",
+          distance: 150,
+          enable: true,
+          opacity: 0.5,
+          width: 1,
+        },
+        move: {
+          direction: "none",
+          enable: true,
+          outModes: {
+            default: "bounce",
+          },
+          random: false,
+          speed: 3,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 80,
+        },
+        opacity: {
+          value: 0.5,
+        },
+        shape: {
+          type: "circle",
+        },
+        size: {
+          value: { min: 1, max: 5 },
+        },
+      },
+      detectRetina: true,
+    }),
+    [],
+  );
+
 
     return (
         <section className='flex min-h-screen sm:flex-row flex-col'>
-            <StarsCanvas/>
+            {/* <StarsCanvas/> */}
+            {
+                init && (
+                    <Particles
+                        id="tsparticles"
+                        particlesLoaded={particlesLoaded}
+                        options={options}
+                    />
+                )
+            }
             <Canvas
                 className={`w-100 h-screen bg-transparent`}
-                style={{ height: '100vh' }}
+                style={{ height: '100vh'}}
                 camera={{  position: [0,0.5, 3] }}
             >
                 {/* <OrbitControls /> */}
@@ -49,7 +158,7 @@ const About = () => {
                     />
                 </Suspense>
             </Canvas>
-            <div className='flex flex-col justify-center content-center text-center sm:text-start'>
+            <div className='flex flex-col justify-center content-center text-center sm:text-start z-10'>
                 <p className={`${styles.sectionSubText} `}>About Me</p>
                 <TypeAnimation
                     sequence={[

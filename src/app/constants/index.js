@@ -40,6 +40,10 @@ const technologies = [
   {
     name: "git",
     icon: "../portfolio/assets/skills/git.png"
+  },
+  {
+    name: "Docker",
+    icon: "../portfolio/assets/skills/docker.png"
   }
 ];
 
