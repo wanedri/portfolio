@@ -120,7 +120,7 @@ const About = () => {
     return (
         <section className='flex min-h-screen sm:flex-row flex-col'>
             {/* <StarsCanvas/> */}
-            {
+            {/* {
                 init && (
                     <Particles
                         id="tsparticles"
@@ -128,7 +128,7 @@ const About = () => {
                         options={options}
                     />
                 )
-            }
+            } */}
             <Canvas
                 className={`w-100 h-screen bg-transparent`}
                 style={{ height: '100vh'}}
